@@ -176,7 +176,7 @@ fn tab_line_prefix(
     palette: Palette,
     cols: usize,
 ) -> Vec<LinePart> {
-    let text_color = match palette.theme_hue {
+    let _text_color = match palette.theme_hue {
         ThemeHue::Dark => palette.white,
         ThemeHue::Light => palette.black,
     };
