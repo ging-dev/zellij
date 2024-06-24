@@ -228,7 +228,7 @@ dependencies = [
  "futures-lite",
  "libc",
  "once_cell",
- "signal-hook",
+ "signal-hook 0.3.14",
  "winapi",
 ]
 
@@ -639,8 +639,8 @@ dependencies = [
  "ansi_term",
  "colored",
  "unicode-width",
- "zellij-tile",
- "zellij-tile-utils",
+ "zellij-tile 0.40.1",
+ "zellij-tile-utils 0.40.1",
 ]
 
 [[package]]
@@ -894,7 +894,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eb2a7d3066da2de787b7f032c736763eb7ae5d355f81a68bab2675a96008b0bf"
 dependencies = [
  "lab",
- "phf",
+ "phf 0.11.1",
 ]
 
 [[package]]
@@ -1316,7 +1316,7 @@ version = "0.1.0"
 dependencies = [
  "serde",
  "serde_json",
- "zellij-tile",
+ "zellij-tile 0.41.0",
 ]
 
 [[package]]
@@ -1960,7 +1960,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a8388a371e0e2ede18bbd94e476fcd45b4ac65cefcedf0c06fd13bd8389574a6"
 dependencies = [
  "miette",
- "nom",
+ "nom 7.1.1",
  "thiserror",
 ]
 
@@ -2342,6 +2342,18 @@ dependencies = [
 
 [[package]]
 name = "nix"
+version = "0.24.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fa52e972a9a719cecb6864fb88568781eb706bac2cd1d4f04a648542dbf78069"
+dependencies = [
+ "bitflags 1.3.2",
+ "cfg-if 1.0.0",
+ "libc",
+ "memoffset 0.6.5",
+]
+
+[[package]]
+name = "nix"
 version = "0.26.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "598beaf3cc6fdd9a5dfb1630c2800c7acd31df7aaf0f565796fba2b53ca1af1b"
@@ -2364,6 +2376,16 @@ dependencies = [
  "cfg_aliases",
  "libc",
  "memoffset 0.9.1",
+]
+
+[[package]]
+name = "nom"
+version = "5.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "08959a387a676302eebf4ddbcbc611da04285579f76f88ee0506c63b1a61dd4b"
+dependencies = [
+ "memchr",
+ "version_check",
 ]
 
 [[package]]
@@ -2677,12 +2699,21 @@ dependencies = [
 
 [[package]]
 name = "phf"
+version = "0.10.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fabbf1ead8a5bcbc20f5f8b939ee3f5b0f6f281b6ad3468b84656b658b455259"
+dependencies = [
+ "phf_shared 0.10.0",
+]
+
+[[package]]
+name = "phf"
 version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "928c6535de93548188ef63bb7c4036bd415cd8f36ad25af44b9789b2ee72a48c"
 dependencies = [
  "phf_macros",
- "phf_shared",
+ "phf_shared 0.11.1",
 ]
 
 [[package]]
@@ -2692,7 +2723,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e8d39688d359e6b34654d328e262234662d16cc0f60ec8dcbe5e718709342a5a"
 dependencies = [
  "phf_generator",
- "phf_shared",
+ "phf_shared 0.11.1",
 ]
 
 [[package]]
@@ -2701,7 +2732,7 @@ version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b1181c94580fa345f50f19d738aaa39c0ed30a600d95cb2d3e23f94266f14fbf"
 dependencies = [
- "phf_shared",
+ "phf_shared 0.11.1",
  "rand 0.8.5",
 ]
 
@@ -2712,10 +2743,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "92aacdc5f16768709a569e913f7451034034178b05bdc8acda226659a3dccc66"
 dependencies = [
  "phf_generator",
- "phf_shared",
+ "phf_shared 0.11.1",
  "proc-macro2",
  "quote",
  "syn 1.0.96",
+]
+
+[[package]]
+name = "phf_shared"
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b6796ad771acdc0123d2a88dc428b5e38ef24456743ddb1744ed628f9815c096"
+dependencies = [
+ "siphasher",
 ]
 
 [[package]]
@@ -3393,7 +3433,7 @@ dependencies = [
  "humantime",
  "unicode-width",
  "uuid",
- "zellij-tile",
+ "zellij-tile 0.41.0",
 ]
 
 [[package]]
@@ -3460,6 +3500,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dd1c7ddea665294d484c39fd0c0d2b7e35bbfe10035c5fe1854741a57f6880e1"
 dependencies = [
  "dirs",
+]
+
+[[package]]
+name = "signal-hook"
+version = "0.1.17"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7e31d442c16f047a671b5a71e2161d6e68814012b7f5379d269ebd915fac2729"
+dependencies = [
+ "libc",
+ "signal-hook-registry",
 ]
 
 [[package]]
@@ -3614,8 +3664,8 @@ dependencies = [
  "serde",
  "serde_json",
  "thiserror",
- "zellij-tile",
- "zellij-tile-utils",
+ "zellij-tile 0.41.0",
+ "zellij-tile-utils 0.41.0",
 ]
 
 [[package]]
@@ -3680,7 +3730,7 @@ dependencies = [
  "serde_json",
  "strip-ansi-escapes",
  "unicode-width",
- "zellij-tile",
+ "zellij-tile 0.41.0",
 ]
 
 [[package]]
@@ -3825,8 +3875,8 @@ dependencies = [
  "ansi_term",
  "colored",
  "unicode-width",
- "zellij-tile",
- "zellij-tile-utils",
+ "zellij-tile 0.41.0",
+ "zellij-tile-utils 0.41.0",
 ]
 
 [[package]]
@@ -3868,14 +3918,27 @@ dependencies = [
 
 [[package]]
 name = "terminfo"
+version = "0.7.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "da31aef70da0f6352dbcb462683eb4dd2bfad01cf3fc96cf204547b9a839a585"
+dependencies = [
+ "dirs",
+ "fnv",
+ "nom 5.1.3",
+ "phf 0.11.1",
+ "phf_codegen",
+]
+
+[[package]]
+name = "terminfo"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "666cd3a6681775d22b200409aad3b089c5b99fb11ecdd8a204d9d62f8148498f"
 dependencies = [
  "dirs",
  "fnv",
- "nom",
- "phf",
+ "nom 7.1.1",
+ "phf 0.11.1",
  "phf_codegen",
 ]
 
@@ -3886,6 +3949,47 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "411c5bf740737c7918b8b1fe232dca4dc9f8e754b8ad5e20966814001ed0ac6b"
 dependencies = [
  "libc",
+]
+
+[[package]]
+name = "termwiz"
+version = "0.20.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9509a978a10fcbace4991deae486ae10885e0f4c2c465123e08c9714a90648fa"
+dependencies = [
+ "anyhow",
+ "base64 0.21.0",
+ "bitflags 1.3.2",
+ "filedescriptor",
+ "finl_unicode",
+ "fixedbitset",
+ "hex",
+ "lazy_static",
+ "libc",
+ "log",
+ "memmem",
+ "nix 0.24.3",
+ "num-derive",
+ "num-traits",
+ "ordered-float 3.3.0",
+ "pest",
+ "pest_derive",
+ "phf 0.10.1",
+ "regex",
+ "semver 0.11.0",
+ "sha2 0.9.9",
+ "signal-hook 0.1.17",
+ "siphasher",
+ "terminfo 0.7.5",
+ "termios",
+ "thiserror",
+ "ucd-trie",
+ "unicode-segmentation",
+ "vtparse",
+ "wezterm-bidi",
+ "wezterm-color-types 0.2.0",
+ "wezterm-dynamic 0.1.0",
+ "winapi",
 ]
 
 [[package]]
@@ -3912,13 +4016,13 @@ dependencies = [
  "ordered-float 4.2.0",
  "pest",
  "pest_derive",
- "phf",
+ "phf 0.11.1",
  "semver 0.11.0",
  "sha2 0.10.8",
- "signal-hook",
+ "signal-hook 0.3.14",
  "siphasher",
  "tempfile",
- "terminfo",
+ "terminfo 0.8.0",
  "termios",
  "thiserror",
  "ucd-trie",
@@ -3926,7 +4030,7 @@ dependencies = [
  "vtparse",
  "wezterm-bidi",
  "wezterm-blob-leases",
- "wezterm-color-types",
+ "wezterm-color-types 0.3.0",
  "wezterm-dynamic 0.2.0",
  "wezterm-input-types",
  "winapi",
@@ -4815,6 +4919,18 @@ dependencies = [
 
 [[package]]
 name = "wezterm-color-types"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4c6e7a483dd2785ba72705c51e8b1be18300302db2a78368dac9bc8773857777"
+dependencies = [
+ "csscolorparser",
+ "deltae",
+ "lazy_static",
+ "wezterm-dynamic 0.1.0",
+]
+
+[[package]]
+name = "wezterm-color-types"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7de81ef35c9010270d63772bebef2f2d6d1f2d20a983d27505ac850b8c4b4296"
@@ -5231,7 +5347,7 @@ dependencies = [
  "thiserror",
  "zellij-client",
  "zellij-server",
- "zellij-utils",
+ "zellij-utils 0.41.0",
 ]
 
 [[package]]
@@ -5245,7 +5361,7 @@ dependencies = [
  "serde_json",
  "serde_yaml",
  "url",
- "zellij-utils",
+ "zellij-utils 0.41.0",
 ]
 
 [[package]]
@@ -5276,7 +5392,21 @@ dependencies = [
  "uuid",
  "wasmer",
  "wasmer-wasi",
- "zellij-utils",
+ "zellij-utils 0.41.0",
+]
+
+[[package]]
+name = "zellij-tile"
+version = "0.40.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "43cd7459277f12a843b3edba8ed44e32ee8f79a76cc26f165d65c09f1441377b"
+dependencies = [
+ "clap",
+ "serde",
+ "serde_json",
+ "strum",
+ "strum_macros",
+ "zellij-utils 0.40.1",
 ]
 
 [[package]]
@@ -5288,7 +5418,16 @@ dependencies = [
  "serde_json",
  "strum",
  "strum_macros",
- "zellij-utils",
+ "zellij-utils 0.41.0",
+]
+
+[[package]]
+name = "zellij-tile-utils"
+version = "0.40.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8690f96da6dd4e39bc546fc7d31856d2d54e0352cb136449bd2bb37ee4c85408"
+dependencies = [
+ "ansi_term",
 ]
 
 [[package]]
@@ -5296,6 +5435,59 @@ name = "zellij-tile-utils"
 version = "0.41.0"
 dependencies = [
  "ansi_term",
+]
+
+[[package]]
+name = "zellij-utils"
+version = "0.40.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "019bf9a4795c67b97da79851f59f3f3970255d1f3e7a6dff4e1033366ca27009"
+dependencies = [
+ "anyhow",
+ "async-channel",
+ "async-std",
+ "backtrace",
+ "clap",
+ "clap_complete",
+ "colored",
+ "colorsys",
+ "common-path",
+ "crossbeam",
+ "directories",
+ "futures",
+ "humantime",
+ "include_dir",
+ "interprocess",
+ "kdl",
+ "lazy_static",
+ "libc",
+ "log",
+ "log4rs",
+ "miette",
+ "nix 0.23.1",
+ "notify-debouncer-full",
+ "once_cell",
+ "openssl-sys",
+ "percent-encoding",
+ "prost",
+ "prost-build",
+ "regex",
+ "rmp-serde",
+ "serde",
+ "serde_json",
+ "shellexpand",
+ "signal-hook 0.3.14",
+ "strip-ansi-escapes",
+ "strum",
+ "strum_macros",
+ "surf",
+ "tempfile",
+ "termwiz 0.20.0",
+ "thiserror",
+ "unicode-width",
+ "url",
+ "uuid",
+ "vte 0.11.0",
 ]
 
 [[package]]
@@ -5338,13 +5530,13 @@ dependencies = [
  "serde",
  "serde_json",
  "shellexpand",
- "signal-hook",
+ "signal-hook 0.3.14",
  "strip-ansi-escapes",
  "strum",
  "strum_macros",
  "surf",
  "tempfile",
- "termwiz",
+ "termwiz 0.22.0",
  "thiserror",
  "unicode-width",
  "url",
